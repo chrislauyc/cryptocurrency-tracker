@@ -165,11 +165,17 @@ img {
   font-family: sans-serif;
   text-align: center;
   width: 100%;
+  background-image: url(./wall-street.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
 }
 
 .navbar {
   align-items: center;
   border-bottom: 1px solid rgb(221, 221, 221);
+  background-color: rgb(207, 207, 214,0.9);
   display: flex;
   height: 70px;
   justify-content: space-between;
@@ -206,6 +212,12 @@ img {
 .charts {
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  background-color:rgb(221, 221, 221,0.5);
+  border-radius: 5px;
 }
 
 .chart__container {
@@ -213,8 +225,11 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 50px 0 0;
-  width: 100%;
+  margin: 1%;
+  width: 40%;
+  @media only screen and (max-width: 768px) {
+    width:100%;
+  }
 }
 
 .chart-header {
@@ -224,6 +239,13 @@ img {
   width: 100%;
   max-width: 900px;
   margin-bottom: 16px;
+}
+
+.chart-background{
+  background-color: rgb(252, 249, 245);
+  width:100%;
+  border: orange 1px solid;
+  // border:black 1px solid;
 }
 
 .coin__title {
@@ -249,5 +271,11 @@ text-align: left;
   .navbar {
     background-color: #1F2022;
     border: none;
+  }
+  .charts{
+    background-color: rgba(0, 0, 0, 0.42);
+  }
+  .chart-background{
+    background-color: rgb(53, 53, 56);
   }
 }
